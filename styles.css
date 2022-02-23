@@ -1,0 +1,60 @@
+*,*::after,*::before{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to left,pink,#eaf2D7);
+}
+
+
+
+.grid-area{
+    display: grid;
+    min-height: 100vh;
+    justify-content: center;
+    align-content: center;
+    grid-template-columns: repeat(4,100px);
+    grid-template-rows: minmax(120px,auto) repeat(5,100px);
+}
+.grid-area>button{
+    cursor: pointer;
+    font-size: 2rem;
+    outline: none;
+    background: rgb(98, 223, 223);
+    border: 1px solid white;
+    
+}
+
+.grid-area .span2{
+    grid-column: span 2;
+}
+
+.grid-area>button:hover{
+    opacity: 50%;
+}
+
+.output{
+    grid-column: span 4;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-end;
+    background: black;
+    color: white;
+    word-wrap: break-word;
+    word-break: break-all;
+    
+}
+
+.output .previous{
+    color:whitesmoke;
+    opacity: 80%;
+    font-size: 1.5rem;
+}
+
+.output .current{
+    color: white;
+    font-size: 2.3rem;
+}
